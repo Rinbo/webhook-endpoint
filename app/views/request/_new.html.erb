@@ -1,0 +1,11 @@
+<div class="container mx-auto mt-12">
+
+<%= form_with url: request_index_path, method: :post do |form| %>
+  <%= form.label :job, class: "block text-grey-darker text-sm font-bold mb-2" %>
+  <%= form.text_field :job, class: "shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"%>
+  <%= form.submit value: "job", class: "bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 my-4 rounded focus:outline-none focus:shadow-outline"%>
+<% end %>
+  <pre class="text-xs"><%= JSON.pretty_generate(@response) %><pre>
+
+
+</div>
