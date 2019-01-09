@@ -1,4 +1,9 @@
-<div class="container mx-auto mt-12">
+<div class="container mx-auto mt-10 border rounded overflow-hidden p-4">
+  <h2> Team Tailor API</h2>
   <%= render partial: "new" %>
-  
+  <br />
+  <h3> Response</h3>
+  <br />
+  <pre class="text-xs"><%= JSON.pretty_generate(@webhook) %><pre>
+  <pre class="text-xs"><%= JSON.pretty_generate(@response) %><pre>
 </div>

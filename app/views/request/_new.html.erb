@@ -1,11 +1,15 @@
-<div class="container mx-auto mt-12">
+<div class="container mx-auto mt-12 ">
 
 <%= form_with url: request_index_path, method: :post do |form| %>
-  <%= form.label :job, class: "block text-grey-darker text-sm font-bold mb-2" %>
-  <%= form.text_field :job, class: "shadow appearance-none border rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"%>
-  <%= form.submit value: "job", class: "bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 my-4 rounded focus:outline-none focus:shadow-outline"%>
+  <%= form.label :type, class: "block text-grey-darker text-sm font-bold mb-2" %>
+  <%= form.text_field :type, class: "shadow appearance-none border rounded mb-4 py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"%>
+  <%= form.label :filter_type, class: "block text-grey-darker text-sm font-bold mb-2" %>
+  <%= form.text_field :filter_type, class: "shadow appearance-none border mb-4 rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"%>
+  <%= form.label :filter_key_word, class: "block text-grey-darker text-sm font-bold mb-2" %>
+  <%= form.text_field :filter_keyword, class: "shadow appearance-none border mb-4 rounded py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"%>
+  <%= form.label :page_size, class: "block text-grey-darker text-sm font-bold mb-2" %>
+  <%= form.text_field :page_size, class: "shadow appearance-none border rounded py-2 px-3 mb-4 text-grey-darker leading-tight focus:outline-none focus:shadow-outline"%>
+  <%= form.submit value: "GET", class: "bg-blue ml-4 hover:bg-blue-dark text-white font-bold py-2 px-4 my-4 rounded focus:outline-none focus:shadow-outline"%>
 <% end %>
-  <pre class="text-xs"><%= JSON.pretty_generate(@response) %><pre>
-
 
 </div>
